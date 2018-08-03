@@ -1,9 +1,4 @@
-# t1
+# zhihu daily
 
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
-
+## 截图
+![image](http://ws1.sinaimg.cn/large/006DVXJ3gy1ftwoplykxvj30lk1a84ff.jpg)
