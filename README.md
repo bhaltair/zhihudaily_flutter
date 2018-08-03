@@ -11,4 +11,4 @@ https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E
 4. 详情页
 
 ## 截图
-![image](https://wx2.sinaimg.cn/mw690/006DVXJ3gy1ftwoplykxvj30lk1a84ff.jpg)
+<img src="https://wx2.sinaimg.cn/mw690/006DVXJ3gy1ftwoplykxvj30lk1a84ff.jpg" alt="drawing" width="200px" />
