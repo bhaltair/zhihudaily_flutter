@@ -2,6 +2,9 @@ import 'dart:convert';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:cached_network_image/cached_network_image.dart';
+
+import '../views/detailPage.dart';
 
 class List2 extends StatefulWidget {
   @override
@@ -24,16 +27,28 @@ class ListState extends State<List2> {
   //新闻列表单个item
   Widget _newsRow(newsInfo) {
     return new Card(
-      child: new Column(
+      child: new Row(
         children: <Widget>[
-          new Container(
-              child: new ListTile(
-                title: new Text(
-                  newsInfo["title"],
-                  textScaleFactor: 1.5,
-                ),
+          new Expanded(
+            flex: 1,
+            child: new Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: new Text(
+                newsInfo["title"],
+                textScaleFactor: 1.5,
+                style: new TextStyle(color: Colors.black, fontSize: 11.0),
               ),
-              margin: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 5.0)),
+            ),
+          ),
+          new Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: new Container(
+                width: 100.0,
+                height: 80.0,
+                child: CachedNetworkImage(
+                  imageUrl: newsInfo["images"][0],
+                )),
+          )
         ],
       ),
     );
@@ -51,14 +66,24 @@ class ListState extends State<List2> {
               itemCount: values.length,
               itemBuilder: (context, index) {
                 var item = values[index];
-                return _newsRow(item);
+                return new InkWell(
+                  child: _newsRow(item),
+                  onTap: () {
+                    Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (ctx) => new DetailPage()
+                    ));
+                  },
+                );
               });
         } else if (snapshot.hasError) {
           return Text("error1>>>>>>>>>>>>>>>:${snapshot.error}");
         }
         return new Container(
-          color: new Color.fromRGBO(244, 245, 245, 1.0),
-        );
+            color: new Color.fromRGBO(244, 245, 245, 1.0),
+            child: new Center(
+              // CircularProgressIndicator是一个圆形的Loading进度条
+              child: new CircularProgressIndicator(),
+            ));
       },
     );
   }
