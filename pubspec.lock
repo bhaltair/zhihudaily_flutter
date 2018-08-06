@@ -90,11 +90,32 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.1"
+  flutter_custom_tabs:
+    dependency: transitive
+    description:
+      name: flutter_custom_tabs
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.0"
+  flutter_html_view:
+    dependency: "direct main"
+    description:
+      name: flutter_html_view
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.5.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_webview_plugin:
+    dependency: "direct main"
+    description:
+      name: flutter_webview_plugin
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.6"
   front_end:
     dependency: transitive
     description:
@@ -366,6 +387,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.5"
+  url_launcher:
+    dependency: transitive
+    description:
+      name: url_launcher
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.3"
   utf:
     dependency: transitive
     description:
@@ -387,6 +415,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.6"
+  video_player:
+    dependency: transitive
+    description:
+      name: video_player
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.5.4"
   watcher:
     dependency: transitive
     description:
@@ -410,4 +445,4 @@ packages:
     version: "2.1.13"
 sdks:
   dart: ">=2.0.0-dev.58 <=2.0.0-dev.58.0.flutter-f981f09760"
-  flutter: ">=0.1.4 <2.0.0"
+  flutter: ">=0.2.5 <2.0.0"

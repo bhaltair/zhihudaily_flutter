@@ -60,7 +60,7 @@ class ListState extends State<List2> {
       future: getCategories(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          print(snapshot.data);
+          // print(snapshot.data);
           values = snapshot.data;
           return new ListView.builder(
               itemCount: values.length,
@@ -69,8 +69,9 @@ class ListState extends State<List2> {
                 return new InkWell(
                   child: _newsRow(item),
                   onTap: () {
+                    // Navigator.of(context).pushNamed("/webview");
                     Navigator.of(context).push(new MaterialPageRoute(
-                      builder: (ctx) => new DetailPage()
+                      builder: (ctx) => new DetailPage(id: item['id'])
                     ));
                   },
                 );
