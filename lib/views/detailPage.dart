@@ -44,6 +44,7 @@ class DetailPageState extends State<DetailPage> {
               ),
               body: new SingleChildScrollView(
                 child: new Center(
+                  // FIXIT 为什么渲染的html多拷贝了一份？
                   // child: new HtmlView(data: html2),
                   child: new Text(html2['body']),
                 ),
